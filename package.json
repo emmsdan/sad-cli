@@ -1,0 +1,20 @@
+{
+  "name": "sad-cli",
+  "version": "1.0.1",
+  "description": "A CLI tool to search and delete files/folders interactively with ignore support",
+  "main": "index.js",
+  "bin": {
+    "sad-cli": "index.js"
+  },
+  "keywords": [
+    "cli",
+    "search",
+    "delete",
+    "files",
+    "folders",
+    "nodejs"
+  ],
+  "author": "emmsdan",
+  "license": "MIT",
+  "dependencies": {}
+}
