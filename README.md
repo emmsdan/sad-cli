@@ -6,7 +6,7 @@
 
 Run it **without installing**:  
 ```sh
-npx sad-cli <folder-path> <name-to-delete> [ignore1 ignore2 ...]
+npx sad-cli <folder-path> <name-to-delete1> <name-to-delete2> ... --ignore <ignore1> <ignore2> ...
 ```
 Or install it **globally**:
 ```sh
@@ -22,16 +22,16 @@ npm install sad-cli
 ### 1️⃣ CLI Mode
 
 ```
-sad-cli <folder-path> <name-to-delete> [ignore1 ignore2 ...]
+sad-cli <folder-path> <name-to-delete1> <name-to-delete2> ... --ignore <ignore1> <ignore2> ...
 ```
 Examples
 1️⃣ Delete test.txt but ignore important.txt
 ```sh
-npx sad-cli ./test-folder test.txt important.txt
+npx sad-cli /path/to/folder test.txt test.mp3 --ignore important.txt important2.pdf
 ```
 2️⃣ Delete node_modules but ignore essential_modules
 ```sh
-npx sad-cli ./my-project node_modules essential_modules
+npx sad-cli ./my-project node_modules --ignore essential_modules
 ```
 
 ### 2️⃣ Node.js Module Mode
@@ -39,7 +39,7 @@ npx sad-cli ./my-project node_modules essential_modules
 const sadCli = require("sad-cli");
 
 (async () => {
-  await sadCli("./my-folder", "old-file.txt", ["important-folder"]);
+  await sadCli("./my-folder", ["old-file.txt"], ["important-folder"]);
 })();
 ```
 
